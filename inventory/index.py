@@ -12,7 +12,7 @@ from UHF import UHFReader  # Adjust the namespace and class name if necessary
 reader = UHFReader()
 
 # Call OpenNetPort
-def OpenNtePort(port, ip_address, com_addr):
+def OpenNetPort(port, ip_address, com_addr):
     result = reader.OpenNetPort(port, ip_address, com_addr)
     return result
 
@@ -49,3 +49,11 @@ def Inventory_G2():
     print("Card Number:", card_num)
 
     return result
+
+def OpenComPort(port, com_addr, baud):
+    # Вызовите метод OpenComPort
+    result = reader.OpenComPort(port, com_addr, baud)
+
+    # Выведите результат
+    print(f"Result: {result}")
+    print(f"Com Address: {com_addr}")
